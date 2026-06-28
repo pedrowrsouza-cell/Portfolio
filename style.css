@@ -1,0 +1,289 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E CORES FUTURISTAS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Fundo espacial escuro com um leve degradê roxo bem profundo */
+    background: radial-gradient(circle at top, #140b24 0%, #05060f 100%);
+    color: #e2e8f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO / MENU HOLOGRÁFICO
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(5, 6, 15, 0.75);
+    backdrop-filter: blur(12px); /* Efeito de vidro escuro */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Linha brilhante embaixo do menu */
+    border-bottom: 1px solid rgba(161, 71, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(161, 71, 255, 0.15);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #bc7fff;
+    text-shadow: 0 0 10px rgba(161, 71, 255, 0.6); /* Brilho na logo */
+    letter-spacing: 1.5px;
+}
+
+nav a {
+    color: #a3aed0;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(161, 71, 255, 0.8);
+}
+
+/* Botão Fale Comigo do Menu */
+.btn-contato {
+    background: transparent;
+    border: 1px solid #a147ff;
+    padding: 8px 20px;
+    border-radius: 4px; /* Cantos mais retos estilo interface sci-fi */
+    color: #a147ff;
+    box-shadow: inset 0 0 8px rgba(161, 71, 255, 0.2);
+}
+
+.btn-contato:hover {
+    background: rgba(161, 71, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(161, 71, 255, 0.6), inset 0 0 8px rgba(161, 71, 255, 0.4);
+}
+
+/* ==========================================================================
+   3. APRESENTAÇÃO PRINCIPAL (HERO)
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: -1px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: #8f9bba;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Botão Principal com Brilho Intenso */
+.btn-principal {
+    display: inline-block;
+    margin-top: 25px;
+    background: #a147ff;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid #bc7fff;
+    box-shadow: 0 0 20px rgba(161, 71, 255, 0.5);
+}
+
+.btn-principal:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(161, 71, 255, 0.9);
+    background: #b163ff;
+}
+
+/* ==========================================================================
+   4. SEÇÕES E BRILHOS GERAIS
+   ========================================================================== */
+.sobre, .projetos, .contato {
+    padding: 100px 15% 80px 15%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(161, 71, 255, 0.4);
+}
+
+.sobre p, .contato p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+    color: #a3aed0;
+}
+
+/* Cards de Projetos (Efeito Painel de Nave) */
+.cards-projetos {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(20, 22, 43, 0.6);
+    border: 1px solid rgba(161, 71, 255, 0.3);
+    padding: 35px;
+    border-radius: 8px;
+    max-width: 450px;
+    text-align: left;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #a147ff;
+    box-shadow: 0 15px 30px rgba(161, 71, 255, 0.25);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+/* Barra de Carregamento Roxa Neon */
+.barra-carregamento {
+    width: 100%;
+    height: 6px;
+    background: #121424;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    border: 1px solid rgba(161, 71, 255, 0.2);
+}
+
+.progresso {
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(90deg, #7928ca, #a147ff);
+    box-shadow: 0 0 10px #a147ff; /* Brilho na barra */
+    animation: carregar 2.5s ease-in-out;
+}
+
+@keyframes carregar {
+    from { width: 0%; }
+    to { width: 65%; }
+}
+
+.btn-projeto {
+    display: inline-block;
+    color: #bc7fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.btn-projeto:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #a147ff;
+}
+
+/* Botão do WhatsApp Integrado ao tema */
+.btn-whatsapp {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #25d366;
+    color: #25d366;
+    padding: 14px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: all 0.3s;
+    box-shadow: inset 0 0 10px rgba(37, 211, 102, 0.1);
+}
+
+.btn-whatsapp:hover {
+    background: rgba(37, 211, 102, 0.15);
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.5), inset 0 0 10px rgba(37, 211, 102, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   5. RODAPÉ
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #4a526d;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(161, 71, 255, 0.1);
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (MOBILE AJUSTADO)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .sobre, .projetos, .contato {
+        padding: 100px 6% 60px 6%;
+    }
+}
